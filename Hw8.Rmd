@@ -20,6 +20,9 @@ The authors of the study are interested in analyzing the variance of the detrend
 
 2) How do they determine the order of the trend model from none to quadratic? Are there any potential criticisms of the way they do this? Do not discuss the potential issue with doing these tests without accounting for potential autocorrelation – we know that the SEs would change if these tests were conducted using models that account for autocorrelation.
 
+-pg 1091 end of Removing the time trend-
+The authors determined the order of the trend for a model by examining the model residuals with a linear, quadratic, or no trend present. They would then use a procedure such as a t-test to decide between what form to use for a model.
+
 3) Figure 3 contains two ACF plots. Discuss the patterns in the two SACFs (left two panels of Figure 3).
 
 4) Note that their bounds for testing in Figure 3 are different from the formula provided in the book – we will discuss the modification I think they used later. What is the sample size (length of time series!) for the mean douglas-fir and mean western white pine time series. Based on these sample sizes, what cut-offs would you plot on Figure 3 based on the approximate result we discussed in class? How do theirs differ?
