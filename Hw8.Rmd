@@ -23,11 +23,8 @@ The authors of the study are interested in analyzing the variance of the detrend
 In the last paragraph of the _Removing the time trend_ section, the authors discuss the need to fit a model in a way such that the residuals have a constant mean and variance. Depending on the model; no tren, linear trend, and quadratic trend fulfill this requirement. They then use t-tests to determine if the linear model or the quadratic model should be used by testing the hypothesis that the slope coefficient for either term is zero, vs the alternative that it is different from zero. The authors could have used other methods to compare model fits such as the AIC or BIC instead of t-tests, since comparing p-values from t-tests does not necissarily define the top fitt model from the selections. 
 
 3) _Figure 3 contains two ACF plots. Discuss the patterns in the two SACFs (left two panels of Figure 3)._
--pg 1092-
-The ACF plots appear to have a damping sinusodial pattern present as the autocorrelation for the lagged variables shifts from positive to negative with runs ranging from 3-7 in length.
 
-For Douglas Fir Trees, the only "significant" spike occurs at lag 2, with some kind of cyclical pattern following for lags farther out. There definitely appears to be a damping effect at higher lags. For the Western White Pine, we can see that the first lag is "significant" with a damping effect at higher lags; there is some cyclical pattern occuring as well. The authors correctly note that this lag-1 dependency may suggest the use of an AR-1 Model.
-
+For Douglas Fir Trees, the only "significant" spike occurs at lag 2, with some kind of cyclical pattern following for lags farther out. There definitely appears to be a damping effect at higher lags. For the Western White Pine, we can see that the first lag is "significant" with a damping effect at higher lags; there is some sinusodial pattern occuring as well. The authors correctly note that this lag-1 dependency may suggest the use of an AR-1 Model.
 
 4) _Note that their bounds for testing in Figure 3 are different from the formula provided in the book – we will discuss the modification I think they used later. What is the sample size (length of time series!) for the mean douglas-fir and mean western white pine time series. Based on these sample sizes, what cut-offs would you plot on Figure 3 based on the approximate result we discussed in class? How do theirs differ?_
 
