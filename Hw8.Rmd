@@ -28,9 +28,9 @@ For Douglas Fir Trees, the only "significant" spike occurs at lag 2, with some k
 
 4) _Note that their bounds for testing in Figure 3 are different from the formula provided in the book – we will discuss the modification I think they used later. What is the sample size (length of time series!) for the mean douglas-fir and mean western white pine time series. Based on these sample sizes, what cut-offs would you plot on Figure 3 based on the approximate result we discussed in class? How do theirs differ?_
 
-The sample size, or length of time series, for the Douglas Fir Trees, is 80 years for 8 trees. Thus, we have 640 observations in the Douglas Fir Data.
+The sample size, or length of time series, for the mean Douglas Fir Trees, is 85 years for 8 trees. Thus, we have an average 680 observations in the Douglas Fir Data.
 
-The sample size for the Western Pine is 80 years of observations on 10 trees, thus we have 800 total observations in the Western Pine data.
+The sample size for the mean Western Pines is 77 years of observations on 10 trees, thus we have an average of 777 total observations in the Western Pine data.
 
 We would have plotted cutoff values of $\frac{2}{\sqrt{n}}$ so for the Douglas Fir trees we would have cutoff values at 0.079 and 0.071 for the Douglas Fir trees and White Pine trees, respectively.
 
