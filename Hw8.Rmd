@@ -29,20 +29,20 @@ The authors determined the order of the trend for a model by examining the model
 
 In the last paragraph of the _Removing the time trend_ section, the authors discuss the need to fit a model in a way such that the residuals have a constant mean and variance. Both the linear and quadratic trend fulfill this requirement. They then use t-tests to determine if the linear model or the quadratic model should be used by testing the hypothesis that the slope coefficient for either term is zero, vs the alternative that it is different from zero. The test gave evidence that the quadratic model was unnecessary, and thus they used the linear model to describe the trends in the data. __We need criticism__
 
-3) Figure 3 contains two ACF plots. Discuss the patterns in the two SACFs (left two panels of Figure 3).
+3) _Figure 3 contains two ACF plots. Discuss the patterns in the two SACFs (left two panels of Figure 3)._
 -pg 1092-
-_The ACF plots appear to have a dampening sinusoidal pattern present as the autocorrelation for the lagged variables shifts from positive to negative with runs ranging from 3-7 in length._
+The ACF plots appear to have a dampening sinusoidal pattern present as the autocorrelation for the lagged variables shifts from positive to negative with runs ranging from 3-7 in length.
 
-_For Douglas Fir Trees, the only "significant" spike occurs at lag 2, with some kind of cyclical pattern following for lags farther out. There definitely appears to be a damping effect at higher lags. For the Western White Pine, we can see that the first lag is "significant" with a damping effect at higher lags; there is some cyclical pattern occuring as well. The authors correctly note that this lag-1 dependency may suggest the use of an AR-1 Model._
+For Douglas Fir Trees, the only "significant" spike occurs at lag 2, with some kind of cyclical pattern following for lags farther out. There definitely appears to be a damping effect at higher lags. For the Western White Pine, we can see that the first lag is "significant" with a damping effect at higher lags; there is some cyclical pattern occuring as well. The authors correctly note that this lag-1 dependency may suggest the use of an AR-1 Model.
 
 
-4) Note that their bounds for testing in Figure 3 are different from the formula provided in the book – we will discuss the modification I think they used later. What is the sample size (length of time series!) for the mean douglas-fir and mean western white pine time series. Based on these sample sizes, what cut-offs would you plot on Figure 3 based on the approximate result we discussed in class? How do theirs differ?
+4) _Note that their bounds for testing in Figure 3 are different from the formula provided in the book – we will discuss the modification I think they used later. What is the sample size (length of time series!) for the mean douglas-fir and mean western white pine time series. Based on these sample sizes, what cut-offs would you plot on Figure 3 based on the approximate result we discussed in class? How do theirs differ?_
 
-_The sample size, or length of time series, for the Douglas Fir Trees, is 80 years for 8 trees. Thus, we have 640 observations in the Douglas Fir Data. _
+The sample size, or length of time series, for the Douglas Fir Trees, is 80 years for 8 trees. Thus, we have 640 observations in the Douglas Fir Data.
 
-_The sample size for the Western Pine is 80 years of observations on 10 trees, thus we have 800 total observations in the Western Pine data. _
+The sample size for the Western Pine is 80 years of observations on 10 trees, thus we have 800 total observations in the Western Pine data.
 
-_We would have plotted cutoff values of_ $\frac{2}{\sqrt{n}}$ _so for the Douglas Fir trees we would have cutoff values at 0.079 and 0.071 for the Douglas Fir trees and White Pine trees, respectively. _
+We would have plotted cutoff values of_ $\frac{2}{\sqrt{n}}$ _so for the Douglas Fir trees we would have cutoff values at 0.079 and 0.071 for the Douglas Fir trees and White Pine trees, respectively.
 
 
 5) We discussed four different reasons for doing time series modeling at the beginning of the semester (pages 1 and 2 of lecture notes). Of those four reasons, which one does their use of ARMA models fall into and why? There may be multiple choices that are reasonable here, so the argument you make is important. I am not talking about what you could do with their models, just what they did do with them and their reason for employing them.
