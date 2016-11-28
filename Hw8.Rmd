@@ -16,10 +16,7 @@ __This should be done in groups of up to 3. You will lose 2% if you do not work 
 
 1) _What do they provide for a reason for removing the quadratic trend? Why do they want to use a trend model with limited flexibility?_
 
--pg 1091 I think under "Removing the time trend"-
-The authors of the study are interested in analyzing the variance of the detrended model, so they subtract the time trend for the model (quadratic in this case) and work with the residuals. The goal of detrending the model is to preserve the underlying variation, so limited trend models are preferable.
-
-A trend model with limited flexibility will help ensure that we preserve the underlying variation in the time series. To form these models, careful thought needs to be put into describing the trend to avoid removing variation that we are interested in. Using more complicated terms, such as higher order polynomial terms or splines, can lead to over fitting the data, so there should be good reason to include higher order terms.
+The authors of the study are interested in analyzing the variance of the detrended model, so they subtract the time trend for the model (quadratic in this case) and work with the residuals. The goal of detrending the model is to preserve the underlying variation, so a trend model with limited flexibility will help ensure that we preserve the underlying variation in the time series. To form these models, careful thought needs to be put into describing the trend to avoid removing variation that we are interested in. Using more complicated terms, such as higher order polynomial terms or splines, can lead to over fitting the data, so there should be good reason to include higher order terms.
 
 2) _How do they determine the order of the trend model from none to quadratic? Are there any potential criticisms of the way they do this? Do not discuss the potential issue with doing these tests without accounting for potential autocorrelation – we know that the SEs would change if these tests were conducted using models that account for autocorrelation._
 
