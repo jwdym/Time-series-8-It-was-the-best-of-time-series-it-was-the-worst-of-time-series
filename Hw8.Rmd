@@ -66,10 +66,13 @@ acf(simz, main = "Fake ACF Plot") #SACF plot
 ```
 
 
-7) Use R to find the roots of your selected AR(2) model based on their published coefficients and note what that tells you about the properties of the AR(2) process under consideration.
+7) _Use R to find the roots of your selected AR(2) model based on their published coefficients and note what that tells you about the properties of the AR(2) process under consideration._
 
-_The published results for each AR(2) model are shown on page 1097. When we take the roots of the AR(2) polynomial for the k, we get exactly one _
+The published results for each AR(2) model are shown on page 1097. When we take the roots of the AR(2) polynomial, we obtain two non-real solutions. They are listed below. When we calculate the modulus of the roots (note that they are the same when squared), we can see that we obtian a modulus value of 2.58. This tells us that we have a stationary AR(2) model. 
 ```{r}
-polyroot(c(.37,.15))
+roots<- polyroot(c(1,.37,.15))
+roots
+sqrt(1.2333^2 + 2.268^2)
+#modulus is 2.58 so we have stationarity
 ```
 
