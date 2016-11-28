@@ -7,7 +7,7 @@ output: pdf_document
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo=TRUE,warning=F,message=F,comment=NA,fig.width=6,fig.height=4)
 ```
 
 __Read Monserud and Marshall (2001) “Time-series analysis of…” All answers to the following should be short even though the paper is long and contains a lot of information. It ends up introducing concepts that we will spend the rest of the semester digging into and does that pretty well. Focus on the statistical methods employed, reasons for using them, and how they discuss their results.__
@@ -58,7 +58,7 @@ plot(simz, main = "Fake Time Series", ylab = "Simulated Response", xlab = "Time"
 acf(simz, main = "Fake SACF Plot",ylab="SACF") #SACF plot
 
 ```
-
+\newpage
 7) _Use R to find the roots of your selected AR(2) model based on their published coefficients and note what that tells you about the properties of the AR(2) process under consideration._
 
 The published results for each AR(2) model are shown on page 1097. When we take the roots of the AR(2) polynomial, we obtain two non-real solutions. They are listed below. When we calculate the modulus of the roots (note that they are the same when squared), we can see that we obtain a modulus value of 2.58. This tells us that we have a stationary AR(2) model. 
