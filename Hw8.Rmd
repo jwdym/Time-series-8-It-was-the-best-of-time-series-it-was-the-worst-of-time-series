@@ -1,9 +1,11 @@
 ---
 title: "Homework 8"
-author: "Jacob Dym, Justin Gomez, Paul Harmon"
+author: "Jacob Dym, Justin Gomez & Paul Harmon"
 date: "11/21/2016"
 output: pdf_document
 ---
+
+So by including this line, I can say that I at least accessed the repository prior to the break. So I've done my part. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
