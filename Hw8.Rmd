@@ -47,7 +47,7 @@ _The four reasons to do time series modeling were as follows:_
 2) _Measurement of seasonal cycles. (Daily, Weekly cycles, etc.)_
 3) _Measurements of longer periodic cycles. (El Nino, etc.) _
 4) _Quasi-Periodic: The periodicity of cycles change over time.  _ 
-_ Of the four above reasons, the _
+_ The researchers fit ARMA models, noting that "higher ordered ARMA models are rarely needed in tree-ring studies"(1091). They therefore fit several variations of first and second-order autoregresssive/moving average models. The authors outline the ARMA models on page 1091. It seems that they are interested primarily in seasonal and longer-period cycles (2 and 3) because they tried considering different lag lengths and  _
 
 6) Use arima.sim to simulate from Delta response AR(2) models for either the mean D or mean W discussed in Table 4 generating the same number of observations as in their time series (see Table 2). You can use a standard deviation for the white noise process of 0.4. This simulation is just concerned with the residual process after removing the trend. Plot a simulated fake time series, the SACF from the fake time series, and compare the results to those that you can find in the paper in Figure 3. How are your results similar or different from their results? Simulate a second series and discuss the differences in your two simulations.
 
