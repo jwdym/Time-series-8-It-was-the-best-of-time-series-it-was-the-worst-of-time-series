@@ -11,11 +11,11 @@ So by including this line, I can say that I at least accessed the repository pri
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Read Monserud and Marshall (2001) “Time-series analysis of…” All answers to the following should be short even though the paper is long and contains a lot of information. It ends up introducing concepts that we will spend the rest of the semester digging into and does that pretty well. Focus on the statistical methods employed, reasons for using them, and how they discuss their results.
+__Read Monserud and Marshall (2001) “Time-series analysis of…” All answers to the following should be short even though the paper is long and contains a lot of information. It ends up introducing concepts that we will spend the rest of the semester digging into and does that pretty well. Focus on the statistical methods employed, reasons for using them, and how they discuss their results.__
 
-This should be done in groups of up to 3. You will lose 2% if you do not work in a group of 2 and get a bonus of 2% if you work in a group of 3.
+__This should be done in groups of up to 3. You will lose 2% if you do not work in a group of 2 and get a bonus of 2% if you work in a group of 3.__
 
-1) What do they provide for a reason for removing the quadratic trend? Why do they want to use a trend model with limited flexibility?
+1) _What do they provide for a reason for removing the quadratic trend? Why do they want to use a trend model with limited flexibility?_
 
 -pg 1091 I think under "Removing the time trend"-
 The authors of the study are interested in analyzing the variance of the detrended model, so they subtract the time trend for the model (quadratic in this case) and work with the residuals. The goal of detrending the model is to preserve the underlying variation, so limited trend models are preferable
@@ -26,9 +26,12 @@ The authors of the study are interested in analyzing the variance of the detrend
 The authors determined the order of the trend for a model by examining the model residuals with a linear, quadratic, or no trend present. They would then use a procedure such as a t-test to decide between what form to use for a model.
 
 3) Figure 3 contains two ACF plots. Discuss the patterns in the two SACFs (left two panels of Figure 3).
-
 -pg 1092-
-The ACF plots appear to have a dampening sinusoidal pattern present as the autocorrelation for the lagged variables shifts from positive to negative with runs ranging from 3-7 in length.
+_The ACF plots appear to have a dampening sinusoidal pattern present as the autocorrelation for the lagged variables shifts from positive to negative with runs ranging from 3-7 in length._
+
+_For Douglas Fir Trees, the only "significant" spike occurs at lag 2, with some kind of cyclical pattern following for lags farther out. There definitely appears to be a damping effect at higher lags. For the Western White Pine, we can see that the first lag is "significant" with a damping effect at higher lags; there is some cyclical pattern occuring as well. The authors correctly note that this lag-1 dependency may suggest the use of an AR-1 Model._
+
+
 
 4) Note that their bounds for testing in Figure 3 are different from the formula provided in the book – we will discuss the modification I think they used later. What is the sample size (length of time series!) for the mean douglas-fir and mean western white pine time series. Based on these sample sizes, what cut-offs would you plot on Figure 3 based on the approximate result we discussed in class? How do theirs differ?
 
