@@ -31,7 +31,7 @@ In the last paragraph of the _Removing the time trend_ section, the authors disc
 
 3) _Figure 3 contains two ACF plots. Discuss the patterns in the two SACFs (left two panels of Figure 3)._
 -pg 1092-
-The ACF plots appear to have a dampening sinusoidal pattern present as the autocorrelation for the lagged variables shifts from positive to negative with runs ranging from 3-7 in length.
+The ACF plots appear to have a damping sinusodial pattern present as the autocorrelation for the lagged variables shifts from positive to negative with runs ranging from 3-7 in length.
 
 For Douglas Fir Trees, the only "significant" spike occurs at lag 2, with some kind of cyclical pattern following for lags farther out. There definitely appears to be a damping effect at higher lags. For the Western White Pine, we can see that the first lag is "significant" with a damping effect at higher lags; there is some cyclical pattern occuring as well. The authors correctly note that this lag-1 dependency may suggest the use of an AR-1 Model.
 
