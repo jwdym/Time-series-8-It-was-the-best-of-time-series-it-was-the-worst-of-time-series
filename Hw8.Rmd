@@ -41,25 +41,25 @@ The four reasons to do time series modeling were as follows:
 1) Single variable measured over time at fixed intervals.
 2) Measurement of seasonal cycles. (Daily, Weekly cycles, etc.)
 3) Measurements of longer periodic cycles. (El Nino, etc.)
-4)_Quasi-Periodic: The periodicity of cycles change over time.
+4) Quasi-Periodic: The periodicity of cycles change over time.
 
-The researchers fit ARMA models, noting that "higher ordered ARMA models are rarely needed in tree-ring studies"(1091). They therefore fit several variations of first and second-order autoregresssive/moving average models. The authors outline the ARMA models on page 1091. It seems that they are interested primarily in seasonal and longer-period cycles (2 and 3) because they tried considering several different lag lengths and moving averages. The researchers talk about finding an "appropriate ARMA model"(1087) - this indicates that they intend to compare these different combinations of moving averages/lags to figure out the seasonal structure of the data (in multi-year cycles).
+The researchers fit ARMA models, noting that "higher ordered ARMA models are rarely needed in tree-ring studies"(1091). They therefore fit several variations of first and second-order autoregresssive/moving average models. The authors outline the ARMA models on page 1091. It seems that they are interested primarily in seasonal and longer-period cycles (2 and 3) because they considering several different lag lengths and moving averages. The researchers talk about finding an "appropriate ARMA model"(1087) - this indicates that they intend to compare these different combinations of moving averages/lags to figure out the seasonal structure of the data (in multi-year cycles).
 
-6) Use arima.sim to simulate from Delta response AR(2) models for either the mean D or mean W discussed in Table 4 generating the same number of observations as in their time series (see Table 2). You can use a standard deviation for the white noise process of 0.4. This simulation is just concerned with the residual process after removing the trend. Plot a simulated fake time series, the SACF from the fake time series, and compare the results to those that you can find in the paper in Figure 3. How are your results similar or different from their results? Simulate a second series and discuss the differences in your two simulations.
+6) _Use arima.sim to simulate from Delta response AR(2) models for either the mean D or mean W discussed in Table 4 generating the same number of observations as in their time series (see Table 2). You can use a standard deviation for the white noise process of 0.4. This simulation is just concerned with the residual process after removing the trend. Plot a simulated fake time series, the SACF from the fake time series, and compare the results to those that you can find in the paper in Figure 3. How are your results similar or different from their results? Simulate a second series and discuss the differences in your two simulations._
 
-_We simulate the time series with SACF plots below. Compared to the plots in Figure 3 (the lower panel since we're interested in Western Pines), we can see that the first and second lags are quite large in the fake plot; this is very similar to the plot that the authors produced. Moreover, while we see the occasional false spike (one occurs at the 19th spike), most of the larger lags appear to be no different from 0. For the most part, we see very similar results from the simulated data as compared to their data._
+We simulate the time series with SACF plots below. Compared to the plots in Figure 3 (the lower panel since we're interested in Western Pines), we can see that the first and second lags are quite large in the fake plot; this is very similar to the plot that the authors produced. Moreover, while we see the occasional false spike (one occurs at the 19th spike), most of the larger lags appear to be no different from 0. For the most part, we see very similar results from the simulated data as compared to their data.
+
 ```{r}
+library(TSA)
 #looks at the Western Pine Trees
 set.seed(123456)
 simz <- arima.sim(n = 800, list(ma=c(2,0)),sd = 0.4 )
 plot(simz, main = "Fake Time Series", ylab = "Simulated Response", xlab = "Time")
-acf(simz, main = "Fake ACF Plot") #SACF plot
+acf(simz, main = "Fake SACF Plot",ylab="SACF") #SACF plot
 
 ```
 
-
 7) _Use R to find the roots of your selected AR(2) model based on their published coefficients and note what that tells you about the properties of the AR(2) process under consideration._
-
 
 The published results for each AR(2) model are shown on page 1097. When we take the roots of the AR(2) polynomial, we obtain two non-real solutions. They are listed below. When we calculate the modulus of the roots (note that they are the same when squared), we can see that we obtian a modulus value of 2.58. This tells us that we have a stationary AR(2) model. 
 ```{r}
