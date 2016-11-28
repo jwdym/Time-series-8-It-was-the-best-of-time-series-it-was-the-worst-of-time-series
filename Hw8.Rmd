@@ -53,7 +53,7 @@ We simulate the time series with SACF plots below. Compared to the plots in Figu
 library(TSA)
 #looks at the Western Pine Trees
 set.seed(123456)
-simz <- arima.sim(n = 800, list(ma=c(2,0)),sd = 0.4 )
+simz <- arima.sim(n = 77, list(ma=c(2,0)),sd = 0.4 )
 plot(simz, main = "Fake Time Series", ylab = "Simulated Response", xlab = "Time")
 acf(simz, main = "Fake SACF Plot",ylab="SACF") #SACF plot
 
