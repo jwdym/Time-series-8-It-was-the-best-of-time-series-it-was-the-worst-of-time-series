@@ -53,12 +53,13 @@ _ The researchers fit ARMA models, noting that "higher ordered ARMA models are r
 
 6) Use arima.sim to simulate from Delta response AR(2) models for either the mean D or mean W discussed in Table 4 generating the same number of observations as in their time series (see Table 2). You can use a standard deviation for the white noise process of 0.4. This simulation is just concerned with the residual process after removing the trend. Plot a simulated fake time series, the SACF from the fake time series, and compare the results to those that you can find in the paper in Figure 3. How are your results similar or different from their results? Simulate a second series and discuss the differences in your two simulations.
 
-_We simulate the time series with SACF plots _ 
+_We simulate the time series with SACF plots below. Compared to the plots in Figure 3 (the lower panel since we're interested in Western Pines), we can see that the first and second lags are quite large in the fake plot; this is very similar to the plot that the authors produced. Moreover, while we see the occasional false spike (one occurs at the 19th spike), most of the larger lags appear to be no different from 0. For the most part, we see very similar results from the simulated data as compared to their data; _ 
 ```{r}
 #looks at the Western Pine Trees
-simz <- arima.sim(n = 800, list(ma=c(1,1)),sd = 1 )
-acf(simz)
-ar.2
+set.seed(123456)
+simz <- arima.sim(n = 800, list(ma=c(2,0)),sd = 0.4 )
+plot(simz, main = "Fake Time Series", ylab = "Simulated Response", xlab = "Time")
+acf(simz, main = "Fake ACF Plot") #SACF plot
 
 ```
 
