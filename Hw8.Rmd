@@ -20,11 +20,11 @@ The authors of the study are interested in analyzing the variance of the detrend
 
 2) _How do they determine the order of the trend model from none to quadratic? Are there any potential criticisms of the way they do this? Do not discuss the potential issue with doing these tests without accounting for potential autocorrelation – we know that the SEs would change if these tests were conducted using models that account for autocorrelation._
 
-In the last paragraph of the _Removing the time trend_ section, the authors discuss the need to fit a model in a way such that the residuals have a constant mean and variance. Depending on the model; no tren, linear trend, and quadratic trend fulfill this requirement. They then use t-tests to determine if the linear model or the quadratic model should be used by testing the hypothesis that the slope coefficient for either term is zero, vs the alternative that it is different from zero. The authors could have used other methods to compare model fits such as the AIC or BIC instead of t-tests, since comparing p-values from t-tests does not necissarily define the top fitt model from the selections. 
+In the last paragraph of the _Removing the time trend_ section, the authors discuss the need to fit a model in a way such that the residuals have a constant mean and variance. Depending on the model; no trend, linear trend, and quadratic trend fulfill this requirement. They then use t-tests to determine if the linear model or the quadratic model should be used by testing the hypothesis that the slope coefficient for either term is zero, vs the alternative that it is different from zero. The authors could have used other methods to compare model fits such as the AIC or BIC instead of t-tests, since comparing p-values from t-tests does not necessarily define the top fit model from the selections. 
 
 3) _Figure 3 contains two ACF plots. Discuss the patterns in the two SACFs (left two panels of Figure 3)._
 
-For Douglas Fir Trees, the only "significant" spike occurs at lag 2, with some kind of cyclical pattern following for lags farther out. There definitely appears to be a damping effect at higher lags. For the Western White Pine, we can see that the first lag is "significant" with a damping effect at higher lags; there is some sinusodial pattern occuring as well. The authors correctly note that this lag-1 dependency may suggest the use of an AR-1 Model.
+For Douglas Fir Trees, the only "significant" spike occurs at lag 2, with some kind of cyclical pattern following for lags farther out. There definitely appears to be a damping effect at higher lags. For the Western White Pine, we can see that the first lag is "significant" with a damping effect at higher lags; there is some sinusoidal pattern occurring as well. The authors correctly note that this lag-1 dependency may suggest the use of an AR-1 Model.
 
 4) _Note that their bounds for testing in Figure 3 are different from the formula provided in the book – we will discuss the modification I think they used later. What is the sample size (length of time series!) for the mean douglas-fir and mean western white pine time series. Based on these sample sizes, what cut-offs would you plot on Figure 3 based on the approximate result we discussed in class? How do theirs differ?_
 
@@ -61,7 +61,7 @@ acf(simz, main = "Fake SACF Plot",ylab="SACF") #SACF plot
 
 7) _Use R to find the roots of your selected AR(2) model based on their published coefficients and note what that tells you about the properties of the AR(2) process under consideration._
 
-The published results for each AR(2) model are shown on page 1097. When we take the roots of the AR(2) polynomial, we obtain two non-real solutions. They are listed below. When we calculate the modulus of the roots (note that they are the same when squared), we can see that we obtian a modulus value of 2.58. This tells us that we have a stationary AR(2) model. 
+The published results for each AR(2) model are shown on page 1097. When we take the roots of the AR(2) polynomial, we obtain two non-real solutions. They are listed below. When we calculate the modulus of the roots (note that they are the same when squared), we can see that we obtain a modulus value of 2.58. This tells us that we have a stationary AR(2) model. 
 ```{r}
 roots<- polyroot(c(1,.37,.15))
 roots
