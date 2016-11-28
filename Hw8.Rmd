@@ -18,7 +18,9 @@ __This should be done in groups of up to 3. You will lose 2% if you do not work 
 1) _What do they provide for a reason for removing the quadratic trend? Why do they want to use a trend model with limited flexibility?_
 
 -pg 1091 I think under "Removing the time trend"-
-The authors of the study are interested in analyzing the variance of the detrended model, so they subtract the time trend for the model (quadratic in this case) and work with the residuals. The goal of detrending the model is to preserve the underlying variation, so limited trend models are preferable
+The authors of the study are interested in analyzing the variance of the detrended model, so they subtract the time trend for the model (quadratic in this case) and work with the residuals. The goal of detrending the model is to preserve the underlying variation, so limited trend models are preferable.
+
+In the last paragraph of the _Removing the time trend_ section, the authors discuss the need to fit a model in a way such that the residuals have a constant mean and variance. Both the linear and quadratic trend fulfill this requirement. They then use t-tests to determine if the linear model or the quadratic model should be used by testing the hypothesis that the slope coefficient for either term is zero, vs the alternative that it is different from zero. The test gave evidence that the quadratic model was unnecessary, and thus they used the linear model to describe the trends in the data.
 
 2) How do they determine the order of the trend model from none to quadratic? Are there any potential criticisms of the way they do this? Do not discuss the potential issue with doing these tests without accounting for potential autocorrelation – we know that the SEs would change if these tests were conducted using models that account for autocorrelation.
 
